@@ -1,0 +1,587 @@
+<!--
+
+The purpose of this page is to present the user
+with available products which can be purchased.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Best clothing store in Trinidad and Tobago">
+    <meta name="keywords"
+        content="Clothes, Clothing, Men's Clothes, Women's Clothes, Shoes, Accessories, Trinidad and Tobago">
+    <meta name="author" content="Daniel Francis">
+
+    <title>LOT21 Clothing | Products</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/mystyle.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800&display=swap');
+
+        .product-list {
+            padding: 20px 10px 20px;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        .product-list>ul {
+            margin: 0 -10px;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        .product-list>ul>li {
+            width: 25%;
+            padding: 10px;
+        }
+
+        .white-box {
+            border-radius: 5px;
+            box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
+            background-color: #ffffff;
+            padding: 35px 20px;
+            transition: all 0.5s ease-in-out;
+            position: relative;
+        }
+
+        .wishlist-icon {
+            position: absolute;
+            right: 12px;
+            top: 10px;
+        }
+
+        .wishlist-icon img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .product-img {
+            min-height: 135px;
+        }
+
+        .product-img img {
+            max-width: 100%;
+            max-height: 130px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .product-bottom {
+            text-align: center;
+        }
+
+        .product-name {
+            font-size: 16px;
+            color: #666;
+            text-align: center;
+            margin: 10px 0 10px;
+            font-weight: 600;
+            max-height: 48px;
+            min-height: 48px;
+            overflow: hidden;
+        }
+
+        .price {
+            margin-top: 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: #000000;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .blue-btn {
+            background: #13cfdf;
+            border-radius: 5px;
+            color: #ffffff;
+            font-weight: 700;
+            border: none;
+            padding: 0 15px;
+            cursor: pointer;
+            height: 30px;
+            line-height: 30px;
+            max-width: 132px;
+            margin: 10px auto 0;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .price .line-through {
+            font-size: 14px;
+            color: #999999;
+            font-weight: 400;
+            vertical-align: 1px;
+            display: inline-block;
+            text-decoration: line-through;
+            margin-left: 4px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR START -->
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+        <a href="index.html" class="navbar-brand"><b>Lot21</b></a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+            <div class="navbar-nav">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Products</a>
+                    <div class="dropdown-menu">
+                        <a href="products-men.html" class="dropdown-item">Men's Clothing</a>
+                        <a href="products-women.html" class="dropdown-item">Women's Clothing</a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Account</a>
+                    <div class="dropdown-menu">
+                        <a href="signup.html" class="dropdown-item">Sign Up</a>
+                        <a href="login.html" class="dropdown-item">Log In</a>
+                    </div>
+                </div>
+
+                <a href="#" class="nav-item nav-link">Cart</a>
+                <a href="contactus.html" class="nav-item nav-link">Contact Us</a>
+                <a href="aboutus.html" class="nav-item nav-link">About Us</a>
+
+            </div>
+
+            <form class="navbar-form form-inline ml-auto">
+                <div class="input-group search-box">
+                    <input type="text" class="form-control" placeholder="Search for products..">
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-danger"><span>Search</span></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    <!-- NAVBAR END -->
+
+    <div class="container">
+        <div class="product-list">
+            <h3>Product Category 1</h3>
+            <div class="row">
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="white-box">
+                        <div class="wishlist-icon">
+                            <a href="javascript:void(0);"><img
+                                    src="https://static.thenounproject.com/png/635650-200.png" /></a>
+                        </div>
+                        <div class="product-img">
+                            <img src="">
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-name">Product</div>
+                            <div class="price">
+                                <span class="rupee-icon">$</span> 0.00
+                                <span class="line-through"><span class="rupee-icon">$</span> 0.00</span>
+
+                            </div>
+                            <a href="#" class="blue-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="white-box">
+                        <div class="wishlist-icon">
+                            <a href="javascript:void(0);"><img
+                                    src="https://static.thenounproject.com/png/635650-200.png" /></a>
+                        </div>
+                        <div class="product-img">
+                            <img src="">
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-name">Product</div>
+                            <div class="price">
+                                <span class="rupee-icon">$</span> 0.00
+                                <span class="line-through"><span class="rupee-icon">$</span> 0.00</span>
+
+                            </div>
+                            <a href="#" class="blue-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="white-box">
+                        <div class="wishlist-icon">
+                            <a href="javascript:void(0);"><img
+                                    src="https://static.thenounproject.com/png/635650-200.png" /></a>
+                        </div>
+                        <div class="product-img">
+                            <img src="">
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-name">Product</div>
+                            <div class="price">
+                                <span class="rupee-icon">$</span> 0.00
+                                <span class="line-through"><span class="rupee-icon">$</span> 0.00</span>
+
+                            </div>
+                            <a href="#" class="blue-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="white-box">
+                        <div class="wishlist-icon">
+                            <a href="javascript:void(0);"><img
+                                    src="https://static.thenounproject.com/png/635650-200.png" /></a>
+                        </div>
+                        <div class="product-img">
+                            <img src="">
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-name">Product</div>
+                            <div class="price">
+                                <span class="rupee-icon">$</span> 0.00
+                                <span class="line-through"><span class="rupee-icon">$</span> 0.00</span>
+
+                            </div>
+                            <a href="#" class="blue-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="product-list">
+            <h3>Product Category 2</h3>
+            <div class="row">
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="white-box">
+                        <div class="wishlist-icon">
+                            <a href="javascript:void(0);"><img
+                                    src="https://static.thenounproject.com/png/635650-200.png" /></a>
+                        </div>
+                        <div class="product-img">
+                            <img src="">
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-name">Product</div>
+                            <div class="price">
+                                <span class="rupee-icon">$</span> 0.00
+                                <span class="line-through"><span class="rupee-icon">$</span> 0.00</span>
+
+                            </div>
+                            <a href="#" class="blue-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="white-box">
+                        <div class="wishlist-icon">
+                            <a href="javascript:void(0);"><img
+                                    src="https://static.thenounproject.com/png/635650-200.png" /></a>
+                        </div>
+                        <div class="product-img">
+                            <img src="">
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-name">Product</div>
+                            <div class="price">
+                                <span class="rupee-icon">$</span> 0.00
+                                <span class="line-through"><span class="rupee-icon">$</span> 0.00</span>
+
+                            </div>
+                            <a href="#" class="blue-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="white-box">
+                        <div class="wishlist-icon">
+                            <a href="javascript:void(0);"><img
+                                    src="https://static.thenounproject.com/png/635650-200.png" /></a>
+                        </div>
+                        <div class="product-img">
+                            <img src="">
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-name">Product</div>
+                            <div class="price">
+                                <span class="rupee-icon">$</span> 0.00
+                                <span class="line-through"><span class="rupee-icon">$</span> 0.00</span>
+
+                            </div>
+                            <a href="#" class="blue-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="white-box">
+                        <div class="wishlist-icon">
+                            <a href="javascript:void(0);"><img
+                                    src="https://static.thenounproject.com/png/635650-200.png" /></a>
+                        </div>
+                        <div class="product-img">
+                            <img src="">
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-name">Product</div>
+                            <div class="price">
+                                <span class="rupee-icon">$</span> 0.00
+                                <span class="line-through"><span class="rupee-icon">$</span> 0.00</span>
+
+                            </div>
+                            <a href="#" class="blue-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="product-list">
+            <h3>Product Category 3</h3>
+            <div class="row">
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="white-box">
+                        <div class="wishlist-icon">
+                            <a href="javascript:void(0);"><img
+                                    src="https://static.thenounproject.com/png/635650-200.png" /></a>
+                        </div>
+                        <div class="product-img">
+                            <img src="">
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-name">Product</div>
+                            <div class="price">
+                                <span class="rupee-icon">$</span> 0.00
+                                <span class="line-through"><span class="rupee-icon">$</span> 0.00</span>
+
+                            </div>
+                            <a href="#" class="blue-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="white-box">
+                        <div class="wishlist-icon">
+                            <a href="javascript:void(0);"><img
+                                    src="https://static.thenounproject.com/png/635650-200.png" /></a>
+                        </div>
+                        <div class="product-img">
+                            <img src="">
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-name">Product</div>
+                            <div class="price">
+                                <span class="rupee-icon">$</span> 0.00
+                                <span class="line-through"><span class="rupee-icon">$</span> 0.00</span>
+
+                            </div>
+                            <a href="#" class="blue-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="white-box">
+                        <div class="wishlist-icon">
+                            <a href="javascript:void(0);"><img
+                                    src="https://static.thenounproject.com/png/635650-200.png" /></a>
+                        </div>
+                        <div class="product-img">
+                            <img src="">
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-name">Product</div>
+                            <div class="price">
+                                <span class="rupee-icon">$</span> 0.00
+                                <span class="line-through"><span class="rupee-icon">$</span> 0.00</span>
+
+                            </div>
+                            <a href="#" class="blue-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="white-box">
+                        <div class="wishlist-icon">
+                            <a href="javascript:void(0);"><img
+                                    src="https://static.thenounproject.com/png/635650-200.png" /></a>
+                        </div>
+                        <div class="product-img">
+                            <img src="">
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-name">Product</div>
+                            <div class="price">
+                                <span class="rupee-icon">$</span> 0.00
+                                <span class="line-through"><span class="rupee-icon">$</span> 0.00</span>
+
+                            </div>
+                            <a href="#" class="blue-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="product-list">
+            <h3>Product Category 4</h3>
+            <div class="row">
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="white-box">
+                        <div class="wishlist-icon">
+                            <a href="javascript:void(0);"><img
+                                    src="https://static.thenounproject.com/png/635650-200.png" /></a>
+                        </div>
+                        <div class="product-img">
+                            <img src="">
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-name">Product</div>
+                            <div class="price">
+                                <span class="rupee-icon">$</span> 0.00
+                                <span class="line-through"><span class="rupee-icon">$</span> 0.00</span>
+
+                            </div>
+                            <a href="#" class="blue-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="white-box">
+                        <div class="wishlist-icon">
+                            <a href="javascript:void(0);"><img
+                                    src="https://static.thenounproject.com/png/635650-200.png" /></a>
+                        </div>
+                        <div class="product-img">
+                            <img src="">
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-name">Product</div>
+                            <div class="price">
+                                <span class="rupee-icon">$</span> 0.00
+                                <span class="line-through"><span class="rupee-icon">$</span> 0.00</span>
+
+                            </div>
+                            <a href="#" class="blue-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="white-box">
+                        <div class="wishlist-icon">
+                            <a href="javascript:void(0);"><img
+                                    src="https://static.thenounproject.com/png/635650-200.png" /></a>
+                        </div>
+                        <div class="product-img">
+                            <img src="">
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-name">Product</div>
+                            <div class="price">
+                                <span class="rupee-icon">$</span> 0.00
+                                <span class="line-through"><span class="rupee-icon">$</span> 0.00</span>
+
+                            </div>
+                            <a href="#" class="blue-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="white-box">
+                        <div class="wishlist-icon">
+                            <a href="javascript:void(0);"><img
+                                    src="https://static.thenounproject.com/png/635650-200.png" /></a>
+                        </div>
+                        <div class="product-img">
+                            <img src="">
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-name">Product</div>
+                            <div class="price">
+                                <span class="rupee-icon">$</span> 0.00
+                                <span class="line-through"><span class="rupee-icon">$</span> 0.00</span>
+
+                            </div>
+                            <a href="#" class="blue-btn">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER START -->
+
+    <div class="footer-dark">
+
+        <footer>
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-3 item text">
+                        <h3>LOT21 Clothing</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus.</p>
+                    </div>
+
+                </div>
+
+                <div class="col item social"><a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+
+                <p class="copyright">LOT21 Clothing &copy; 2023</p>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <!-- FOOTER END -->
+
+</body>
